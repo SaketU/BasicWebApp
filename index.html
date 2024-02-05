@@ -85,6 +85,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		exampleVariable2 = 0;
 		exampleVariable3 = 0;
 	}
+
+	function getValues()
+	{
+		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
+    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
+		for(let num = 0; num < exampleVariable1; num++)
+		{
+			var smileyImage = document.createElement(“img”);
+			smileyImage.src = “https://i.imgur.com/jctdkSS.png”;
+			document.getElementById(“pictures”).appendChild(smileyImage);
+		}
+		for(let num = 0; num < exampleVariable2; num++)
+		{
+			var smileyImage = document.createElement(“img”);
+			smileyImage.src = “https://i.imgur.com/jctdkSS.png”;
+			document.getElementById(“pictures”).appendChild(smileyImage);
+		}
+		document.getElementById(“description”).innerHTML = “You inserted ” + exampleVariable1 + “ smiley faces and ” + exampleVariable2 + “ frowny faces!”;
+	}
 </script>
   
   
@@ -160,6 +179,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   <a href="#finalpage" onclick="exampleFunction1();" class="w3-btn w3-grey">Button 1</a>
   <a href="#finalpage" onclick="exampleFunction2();" class="w3-btn w3-grey">Button 2</a>
   <a href="#finalpage" onclick="exampleFunction3();" class="w3-btn w3-grey">Button 3</a>
+  <a href="#smilies" onclick="getValues();" class="w3-btn w3-grey">Smiley faces</a>
     
   </center>
 </div>  
@@ -175,12 +195,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
     		
 	<!--Main content of the page.-->
+	<center>
 	<div id="pictures" class="w3-container">
 		<p id="description">text</p>
 	</div>
   		
 	<!--A link that runs a function when clicked and takes the user to a new page.-->
-	<a href=“#pageNameHere” class="     " onclick="functionNameHere();">     </a>
+	<a href=“#content” class="w3-btn w3-grey" onclick="resetVariables();">Return Home</a>
+	</center>
 </div>    
 	  
 	  
