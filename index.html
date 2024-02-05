@@ -90,6 +90,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	{
 		x = parseFloat(document.getElementById("firstInputBox").value);
     		y = parseFloat(document.getElementById("secondInputBox").value);
+		
 		for(let num = 0; num < x; num++)
 		{
 			var smileyImage = document.createElement(“img”);
@@ -99,10 +100,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		for(let num = 0; num < y; num++)
 		{
 			var frownyImage = document.createElement(“img”);
-			smileyImage.src = “https://i.imgur.com/dVUqrSt.png”;
+			frownyImage.src = “https://i.imgur.com/dVUqrSt.png”;
 			document.getElementById(“pictures”).appendChild(frownyImage);
 		}
-		document.getElementById(“description”).innerHTML = “You inserted ” + exampleVariable1 + “ smiley faces and ” + exampleVariable2 + “ frowny faces!”;
+		document.getElementById(“description”).innerHTML = “You inserted ” + x + “ smiley faces and ” + y + “ frowny faces!”;
 	}
 </script>
   
