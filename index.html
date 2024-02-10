@@ -39,9 +39,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	var introvertedPercentage = 0;
 	var extrovertedPercentage = 0;
 	var age = 0;
-	var exampleVariable1 = 0;
-	var exampleVariable2 = 0;
-	var exampleVariable3 = 0;
 
 	function ageValue()
 	{
@@ -49,73 +46,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     		document.getElementById("ageValue").innerText = age;
 	}
 	
-	function exampleFunction1()
-	{
-		// Assigns values to existing variables based on user input. The parseFloat() function converts string values to numerical values.
-    		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 + exampleVariable2;
-		
-		alert("You just ran an addition function!");
-		console.log("Addition function was run.");
-	}
-	
-	function exampleFunction2()
-	{
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 * exampleVariable2;
-		
-		alert("You just ran a multiplication function!");
-		console.log("Multiplication function was run.");
-	}
-	
-	function exampleFunction3()
-	{
-		exampleVariable1 = parseFloat(document.getElementById("firstInputBox").value);
-    		exampleVariable2 = parseFloat(document.getElementById("secondInputBox").value);
-		
-		exampleVariable3 = exampleVariable1 ** exampleVariable2;
-		
-		alert("You just ran an exponent function!");
-		console.log("Exponent function was run.");
-	}
-	
-	function exampleResultsFunction()
-	{
-		document.getElementById("endResults").innerHTML = "Your final result is: " + exampleVariable3;
-		resetVariables();
-	}
-	
 	function resetVariables()
 	{
 		introvertedPercentage = 0
 		extrovertedPercentage = 0;
-		exampleVariable1 = 0;
-		exampleVariable2 = 0;
-		exampleVariable3 = 0;
-	}
-
-	function getValues()
-	{
-		x = parseFloat(document.getElementById("firstInputBox").value);
-    		y = parseFloat(document.getElementById("secondInputBox").value);
-		
-		for(let num = 0; num < x; num++)
-		{
-			var smileyImage = document.createElement("img");
-			smileyImage.src = "https://i.imgur.com/jctdkSS.png";
-			document.getElementById("pictures").appendChild(smileyImage);
-		}
-		for(let num = 0; num < y; num++)
-		{
-			var frownyImage = document.createElement("img");
-			frownyImage.src = "https://i.imgur.com/dVUqrSt.png";
-			document.getElementById("pictures").appendChild(frownyImage);
-		}
-		document.getElementById("description").innerHTML = "You inserted " + x + " smiley faces and " + y + " frowny faces!";
+		age = 0;
 	}
 
 	function incrementIntroverted()
@@ -400,34 +335,6 @@ img {
 	<a href="#finalpage" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">No</a>
   </center>
 </div>  
-
-
-
-	  
-<!--This is the [x]th page.-->
-<div id="smilies" class="page">
-	<!--Header.-->
-	<div id="emojis" class="w3-container w3-flat-carrot">
-		<h1>Cool smily faces</h1>
-	</div>
-    		
-	<!--Main content of the page.-->
-	<center>
-	<div id="pictures" class="w3-container">
-		<p id="description">text</p>
-	</div>
-  		
-	<!--A link that runs a function when clicked and takes the user to a new page.-->
-	<a href= "#one" onclick="resetVariables();" class="w3-btn w3-grey w3-round">Return Home</a>
-	</center>
-</div>    
-	  
-	  
-	  
-	  
-	  
-	  
-	  
 	  
 <!--LAST SUBPAGE-->
 <div id="finalpage" class="page">
