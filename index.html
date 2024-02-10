@@ -36,8 +36,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!--Javascript code.-->
 <script>
 
-	var introvertedCount = 0;
-	var extrovertedCount = 0;
+	var introvertedPercentage = 0;
+	var extrovertedPercentage = 0;
 	var exampleVariable1 = 0;
 	var exampleVariable2 = 0;
 	var exampleVariable3 = 0;
@@ -84,6 +84,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	function resetVariables()
 	{
+		introvertedPercentage = 0
+		extrovertedPercentage = 0;
 		exampleVariable1 = 0;
 		exampleVariable2 = 0;
 		exampleVariable3 = 0;
@@ -111,13 +113,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	function incrementIntroverted()
 	{
-		introvertedCount += 10;
+		introvertedPercentage += 10;
 		document.getElementById("introvertedValue").innerText = introvertedCount;
 	}
 
 	function incrementExtroverted()
 	{
-		extrovertedCount += 10;
+		extrovertedPercentage += 10;
 		document.getElementById("extrovertedValue").innerText = extrovertedCount;
 	}
 	
@@ -413,13 +415,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <!--LAST SUBPAGE-->
 <div id="finalpage" class="page">
     <div id="finalheader" class="w3-container w3-flat-carrot">
-        <h1>FINAL PAGE TITLE GOES HERE</h1>
+        <center>
+		<h1>Personality Test</h1>
+	</center>
     </div>
     
     <center>
         
         <div id="finalcontent" class="w3-container">
-            <p id="endResults">FINAL PAGE CONTENT GOES HERE</p>
+            <p id="endResults">Results</p>
             <!-- Add a paragraph element to display the final value -->
             <p>You are <span id="introvertedValue">0</span>% Introverted</p>
 	    <p>You are <span id="extrovertedValue">0</span>% Extroverted</p>
