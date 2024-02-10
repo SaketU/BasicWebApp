@@ -38,9 +38,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	var introvertedPercentage = 0;
 	var extrovertedPercentage = 0;
+	var age = 0;
 	var exampleVariable1 = 0;
 	var exampleVariable2 = 0;
 	var exampleVariable3 = 0;
+
+	function incrementAge()
+	{
+		age = parseFloat(document.getElementById("ageValue").value);
+	}
 	
 	function exampleFunction1()
 	{
@@ -200,7 +206,7 @@ img {
 		<input type="number" id="firstInputBox" value="0"><br>
 	</form>
       
-  <a href="#one" class="w3-btn w3-grey w3-round">Next Question</a>
+  <a href="#one" onclick="incrementAge();" class="w3-btn w3-grey w3-round">Next Question</a>
     
   </center>
 </div>  
@@ -435,7 +441,8 @@ img {
         <div id="finalcontent" class="w3-container">
             <p id="endResults">Results</p>
             <!-- Add a paragraph element to display the final value -->
-            <p>You are <span id="introvertedValue">0</span>% Introverted</p>
+            <p>You are <span id="ageValue">0</span> years old</p>
+	    <p>You are <span id="introvertedValue">0</span>% Introverted</p>
 	    <p>You are <span id="extrovertedValue">0</span>% Extroverted</p>
         </div>
         <a href="#content" onclick="resetVariables();" class="w3-btn w3-grey w3-round">Return to Home Page</a>
