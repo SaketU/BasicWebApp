@@ -111,13 +111,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	function incrementIntroverted()
 	{
-		introvertedCount++;
+		introvertedCount += 10;
 		document.getElementById("introvertedValue").innerText = introvertedCount;
 	}
 
 	function incrementExtroverted()
 	{
-		extrovertedCount++;
+		extrovertedCount += 10;
 		document.getElementById("extrovertedValue").innerText = extrovertedCount;
 	}
 	
@@ -421,8 +421,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <div id="finalcontent" class="w3-container">
             <p id="endResults">FINAL PAGE CONTENT GOES HERE</p>
             <!-- Add a paragraph element to display the final value -->
-            <p>Final Value of Introverted Variable: <span id="introvertedValue">0</span></p>
-	    <p>Final Value of Extroverted Variable: <span id="extrovertedValue">0</span></p>
+            <p>You are <span id="introvertedValue">0</span>% Introverted</p>
+	    <p>You are <span id="extrovertedValue">0</span>% Extroverted</p>
         </div>
         
         <a class="w3-btn w3-black" onclick="exampleResultsFunction();">Click me!
