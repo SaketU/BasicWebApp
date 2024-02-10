@@ -45,7 +45,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	function incrementAge()
 	{
-		age = parseFloat(document.getElementById("ageValue").value);
+		age = parseFloat(document.getElementById("firstInputBox").value);
+    		document.getElementById("ageValue").innerText = age;
 	}
 	
 	function exampleFunction1()
