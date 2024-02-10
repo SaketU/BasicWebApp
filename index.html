@@ -35,6 +35,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <!--Javascript code.-->
 <script>
+
+	var introvertedCount = 0;
+	var extrovertedCount = 0;
 	var exampleVariable1 = 0;
 	var exampleVariable2 = 0;
 	var exampleVariable3 = 0;
@@ -105,6 +108,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		}
 		document.getElementById("description").innerHTML = "You inserted " + x + " smiley faces and " + y + " frowny faces!";
 	}
+
+	function incrementIntroverted()
+	{
+		introvertedCount++;
+		document.getElementById("introvertedValue").innerText = introvertedCount;
+	}
+
+	function incrementExtroverted()
+	{
+		extrovertedCount++;
+		document.getElementById("extrovertedValue").innerText = extrovertedCount;
+	}
+	
 </script>
   
   
