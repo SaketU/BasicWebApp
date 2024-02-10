@@ -1,22 +1,11 @@
 <!DOCTYPE html>
 <html>
-<!--The following code has been developed by students and/or researchers of the Freshman Research Initiative Maker Space Stream at The University of Texas at Austin. This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only.
+<!--
+Author: Saket Upperla
 
-Any user of this code does so at their own risk. Members of the Maker Space Stream, FRI, and The University of Texas system are not liable for anything related to this code.
+Brief summary of this code: This app is used to find out if a person is more introverted or extroverted based on their personal preferences.
 
-THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
-
-Authors in chronological order of contribution:
-  Tim Riedel
-  Niam Kuttanna
-  [...]
-
-Further Information:
-  http://cns.utexas.edu/fri
-
-Brief summary of this code: [...]
-
-Known issues: [...]
+Known issues: This app is not a comprehensive test to determine if someone is more introverted or extroverted. It is only a simple test that has limitations to is generalizations.
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -31,8 +20,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     <link rel="stylesheet" href="w3-colors-flat.css">
   </head>
 
-  
-
 <!--Javascript code.-->
 <script>
 
@@ -40,6 +27,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	var extrovertedPercentage = 0;
 	var age = 0;
 
+	<!--Get age from form-->
 	function ageValue()
 	{
 		age = parseFloat(document.getElementById("firstInputBox").value);
@@ -68,7 +56,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </script>
   
   
- 
 <!--CSS webpage style/format settings.-->
 <style>	
 .body {
@@ -127,7 +114,6 @@ img {
 			<h1>Personality Test</h1>
 		</center>
 	</div>
-	
   <center>
     
     	<div id="content2" class="w3-container">
@@ -141,7 +127,6 @@ img {
 		<!--User input box.-->
 		<input type="number" id="firstInputBox" value="0" oninput="ageValue();"><br>
 	</form>
-      
   <a href="#one" class="w3-btn w3-grey w3-round">Next Question</a>
     
   </center>
@@ -161,7 +146,6 @@ img {
     	</div>
 	<a href="#two" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">Yes</a>
 	<a href="#two" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">No</a>
-    
   </center>
 </div>  
 
@@ -192,13 +176,11 @@ img {
 	</div>
 	
   <center>
-    
     	<div id="content2" class="w3-container">
         	<p>Are you afraid of criticism or constructive feedback?</p>    
     	</div>
 	<a href="#four" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">Yes</a>
 	<a href="#four" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">No</a>
-    
   </center>
 </div>  
 
@@ -211,13 +193,11 @@ img {
 	</div>
 	
   <center>
-    
     	<div id="content2" class="w3-container">
         	<p>Do you feel uncomfortable talking to new people?</p>    
     	</div>
 	<a href="#five" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">Yes</a>
 	<a href="#five" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">No</a>
-    
   </center>
 </div>  
 
@@ -230,13 +210,11 @@ img {
 	</div>
 	
   <center>
-    
     	<div id="content2" class="w3-container">
         	<p>Do you ever worry about what other people think about you?</p>    
     	</div>
 	<a href="#six" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">Yes</a>
 	<a href="#six" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">No</a>
-    
   </center>
 </div>  
 
@@ -249,13 +227,11 @@ img {
 	</div>
 	
   <center>
-    
     	<div id="content2" class="w3-container">
         	<p>Are you inclined to take a leadership position if offered one?</p>    
     	</div>
 	<a href="#seven" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">Yes</a>
 	<a href="#seven" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">No</a>
-    
   </center>
 </div>  
 
@@ -268,13 +244,11 @@ img {
 	</div>
 	
   <center>
-    
     	<div id="content2" class="w3-container">
         	<p>Do you tend to observe people rather than speak to them?</p>    
     	</div>
 	<a href="#eight" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">Yes</a>
 	<a href="#eight" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">No</a>
-    
   </center>
 </div>  
 
@@ -288,13 +262,11 @@ img {
 	</div>
 	
   <center>
-    
     	<div id="content2" class="w3-container">
         	<p>Is it easy for you to empathize with others who are very different from you?</p>    
     	</div>
 	<a href="#nine" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">Yes</a>
 	<a href="#nine" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">No</a>
-    
   </center>
 </div>  
 
@@ -306,15 +278,12 @@ img {
 			<h1>Personality Test</h1>
 		</center>
 	</div>
-	
   <center>
-    
     	<div id="content2" class="w3-container">
         	<p>Do you enjoy going out to an event after an exhausting day?</p>    
     	</div>
 	<a href="#ten" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">Yes</a>
 	<a href="#ten" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">No</a>
-    
   </center>
 </div>  
 
@@ -325,9 +294,7 @@ img {
 			<h1>Personality Test</h1>
 		</center>
 	</div>
-	
   <center>
-    
     	<div id="content2" class="w3-container">
         	<p>Are you bothered by mistakes you have made in the past?</p>    
     	</div>
@@ -336,7 +303,7 @@ img {
   </center>
 </div>  
 	  
-<!--LAST SUBPAGE-->
+<!--Results-->
 <div id="finalpage" class="page">
     <div id="finalheader" class="w3-container w3-flat-carrot">
         <center>
@@ -345,16 +312,14 @@ img {
     </div>
     
     <center>
-        
         <div id="finalcontent" class="w3-container">
             <p id="endResults">Results</p>
-            <!-- Add a paragraph element to display the final value -->
+            <!-- Displays final introverted and extroverted percentages along with age -->
             <p>You are <span id="ageValue">0</span> years old</p>
 	    <p>You are <span id="introvertedValue">0</span>% Introverted</p>
 	    <p>You are <span id="extrovertedValue">0</span>% Extroverted</p>
         </div>
         <a href="#content" onclick="resetVariables();" class="w3-btn w3-grey w3-round">Return to Home Page</a>
-        
     </center>
 </div>
   
