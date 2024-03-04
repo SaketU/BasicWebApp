@@ -5,116 +5,337 @@ Author: Saket Upperla
 
 Brief summary of this code: This app is used to find out if a person is more introverted or extroverted based on their personal preferences.
 
-Known issues: This app is not a comprehensive test to determine if someone is more introverted or extroverted. It is only a simple test that has limitations to its generalizations.
+Known issues: This app is not a comprehensive test to determine if someone is more introverted or extroverted. It is only a simple test that has limitations to is generalizations.
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
 
-<head>
-  <title>Personality Test</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <link rel="stylesheet" href="w3.css">
-  <link rel="stylesheet" href="w3-colors-flat.css">
-</head>
+  <!--Formatting source information and webpage title.-->
+  <head>
+    <title>Personality Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="w3-colors-flat.css">
+  </head>
 
+<!--Javascript code.-->
+<script>
+
+	var introvertedPercentage = 0;
+	var extrovertedPercentage = 0;
+	var age = 0;
+
+	<!--Get age from form-->
+	function ageValue()
+	{
+		age = parseFloat(document.getElementById("firstInputBox").value);
+    		document.getElementById("ageValue").innerText = age;
+	}
+	
+	function resetVariables()
+	{
+		introvertedPercentage = 0
+		extrovertedPercentage = 0;
+		age = 0;
+	}
+
+	function incrementIntroverted()
+	{
+		introvertedPercentage += 10;
+		document.getElementById("introvertedValue").innerText = introvertedPercentage;
+	}
+
+	function incrementExtroverted()
+	{
+		extrovertedPercentage += 10;
+		document.getElementById("extrovertedValue").innerText = extrovertedPercentage;
+	}
+	
+</script>
+  
+  
+<!--CSS webpage style/format settings.-->
+<style>	
+body {
+     margin: 0px auto;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.page:target {
+    left: 0vw;
+    z-index: 1;
+}
+
+img {
+	padding-top: 30px;
+}
+
+.w3-flat-carrot {
+	background-color: black
+}
+
+#home {
+     background-image: url('https://scitechdaily.com/images/Personality-Brain-Cognition.jpg');
+     background-size: cover;
+     background-position: center;
+}
+	
+</style>
+
+
+
+<!--Main HTML body section.-->
 <body>
-  <!-- Landing page content. -->
+  <!--Landing page content.-->
   <div id="home" class="w3-container">
-    <div id="header" class="w3-container w3-flat-carrot">
-      <center>
-        <h1>Personality Test</h1>
-      </center>
+  	<!--Header!-->
+	<div id="header" class="w3-container w3-flat-carrot">
+		<center>
+		  <h1>Personality Test</h1>
+		</center>
+	</div>
+	<center>
+	  <img src="https://www.simplypsychology.org/wp-content/uploads/introvert-extrovert.jpeg" alt="Introvert vs Extrovert" width="600" height="350">
+	  <p>This test determines if a person personality is more introverted or extroverted based on their preferences.</p>
+	  <a href="#age" class="w3-btn w3-grey w3-round">Get Started!</a>
+  	</center>
+  </div>
+  
+<!--Age-->
+<div id="age" class="page">
+	<div id="header2" class="w3-container w3-flat-carrot">
+		<center>
+			<h1>Personality Test</h1>
+		</center>
+	</div>
+  <center>
+    
+    	<div id="content2" class="w3-container">
+        	<p>What is your age?</p>    
+    	</div>
+	
+	<!--Form element. This allows for user input in HTML.-->
+	<form>
+		<!--Label for first input field.-->
+		<label for="firstInputBox">Enter a number:</label><br>
+		<!--User input box.-->
+		<input type="number" id="firstInputBox" value="0" oninput="ageValue();"><br>
+	</form>
+  <a href="#one" class="w3-btn w3-grey w3-round">Next Question</a>
+    
+  </center>
+</div>  
+
+<!--Question 1-->
+<div id="one" class="page">
+	<div id="header2" class="w3-container w3-flat-carrot">
+		<center>
+			<h1>Personality Test</h1>
+		</center>
+	</div>
+	
+  <center>
+    	<div id="content2" class="w3-container">
+        	<p>Whenever you are faced with a dilemma, do you tend to think out loud or ask others for solutions?</p>    
+    	</div>
+	<a href="#two" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">Yes</a>
+	<a href="#two" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">No</a>
+  </center>
+</div>  
+
+<!--Question 2-->
+<div id="two" class="page">
+	<div id="header2" class="w3-container w3-flat-carrot">
+		<center>
+			<h1>Personality Test</h1>
+		</center>
+	</div>
+	
+  <center>
+    	<div id="content2" class="w3-container">
+        	<p>Do you enjoy group work?</p>    
+    	</div>
+	<a href="#three" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">Yes</a>
+	<a href="#three" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">No</a>	  
+    
+  </center>
+</div>  
+
+<!--Question 3-->
+<div id="three" class="page">
+	<div id="header2" class="w3-container w3-flat-carrot">
+		<center>
+			<h1>Personality Test</h1>
+		</center>
+	</div>
+	
+  <center>
+    	<div id="content2" class="w3-container">
+        	<p>Are you afraid of criticism or constructive feedback?</p>    
+    	</div>
+	<a href="#four" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">Yes</a>
+	<a href="#four" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">No</a>
+  </center>
+</div>  
+
+<!--Question 4-->
+<div id="four" class="page">
+	<div id="header2" class="w3-container w3-flat-carrot">
+		<center>
+			<h1>Personality Test</h1>
+		</center>
+	</div>
+	
+  <center>
+    	<div id="content2" class="w3-container">
+        	<p>Do you feel uncomfortable talking to new people?</p>    
+    	</div>
+	<a href="#five" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">Yes</a>
+	<a href="#five" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">No</a>
+  </center>
+</div>  
+
+<!--Question 5-->
+<div id="five" class="page">
+	<div id="header2" class="w3-container w3-flat-carrot">
+		<center>
+			<h1>Personality Test</h1>
+		</center>
+	</div>
+	
+  <center>
+    	<div id="content2" class="w3-container">
+        	<p>Do you ever worry about what other people think about you?</p>    
+    	</div>
+	<a href="#six" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">Yes</a>
+	<a href="#six" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">No</a>
+  </center>
+</div>  
+
+<!--Question 6-->
+<div id="six" class="page">
+	<div id="header2" class="w3-container w3-flat-carrot">
+		<center>
+			<h1>Personality Test</h1>
+		</center>
+	</div>
+	
+  <center>
+    	<div id="content2" class="w3-container">
+        	<p>Are you inclined to take a leadership position if offered one?</p>    
+    	</div>
+	<a href="#seven" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">Yes</a>
+	<a href="#seven" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">No</a>
+  </center>
+</div>  
+
+<!--Question 7-->
+<div id="seven" class="page">
+	<div id="header2" class="w3-container w3-flat-carrot">
+		<center>
+			<h1>Personality Test</h1>
+		</center>
+	</div>
+	
+  <center>
+    	<div id="content2" class="w3-container">
+        	<p>Do you tend to observe people rather than speak to them?</p>    
+    	</div>
+	<a href="#eight" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">Yes</a>
+	<a href="#eight" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">No</a>
+  </center>
+</div>  
+
+
+<!--Question 8-->
+<div id="eight" class="page">
+	<div id="header2" class="w3-container w3-flat-carrot">
+		<center>
+			<h1>Personality Test</h1>
+		</center>
+	</div>
+	
+  <center>
+    	<div id="content2" class="w3-container">
+        	<p>Is it easy for you to empathize with others who are very different from you?</p>    
+    	</div>
+	<a href="#nine" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">Yes</a>
+	<a href="#nine" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">No</a>
+  </center>
+</div>  
+
+
+<!--Question 9-->
+<div id="nine" class="page">
+	<div id="header2" class="w3-container w3-flat-carrot">
+		<center>
+			<h1>Personality Test</h1>
+		</center>
+	</div>
+  <center>
+    	<div id="content2" class="w3-container">
+        	<p>Do you enjoy going out to an event after an exhausting day?</p>    
+    	</div>
+	<a href="#ten" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">Yes</a>
+	<a href="#ten" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">No</a>
+  </center>
+</div>  
+
+<!--Question 10-->
+<div id="ten" class="page">
+	<div id="header2" class="w3-container w3-flat-carrot">
+		<center>
+			<h1>Personality Test</h1>
+		</center>
+	</div>
+  <center>
+    	<div id="content2" class="w3-container">
+        	<p>Are you bothered by mistakes you have made in the past?</p>    
+    	</div>
+	<a href="#finalpage" onclick="incrementIntroverted();" class="w3-btn w3-grey w3-round">Yes</a>
+	<a href="#finalpage" onclick="incrementExtroverted();" class="w3-btn w3-grey w3-round">No</a>
+  </center>
+</div>  
+	  
+<!--Results-->
+<div id="finalpage" class="page">
+    <div id="finalheader" class="w3-container w3-flat-carrot">
+        <center>
+		<h1>Personality Test</h1>
+	</center>
     </div>
+    
     <center>
-      <img src="https://www.simplypsychology.org/wp-content/uploads/introvert-extrovert.jpeg" alt="Introvert vs Extrovert" width="600" height="350">
-      <p>This test determines if a person's personality is more introverted or extroverted based on their preferences.</p>
-      <a href="#age" class="w3-btn w3-grey w3-round">Get Started!</a>
+        <div id="finalcontent" class="w3-container">
+            <p id="endResults">Results</p>
+            <!-- Displays final introverted and extroverted percentages along with age -->
+            <p>You are <span id="ageValue">0</span> years old</p>
+	    <p>You are <span id="introvertedValue">0</span>% Introverted</p>
+	    <p>You are <span id="extrovertedValue">0</span>% Extroverted</p>
+        </div>
+        <a href="#content" onclick="resetVariables();" class="w3-btn w3-grey w3-round">Return to Home Page</a>
     </center>
-  </div>
+</div>
+  
+  
+  
+<!--Footer!-->
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>Developed by Saket Upperla</p>
+</footer>
+</div>
 
-  <!-- Age -->
-  <div id="age" class="page">
-    <div class="w3-container w3-flat-carrot">
-      <center>
-        <h1>Personality Test</h1>
-      </center>
-    </div>
-    <center>
-      <div class="w3-container">
-        <p>What is your age?</p>
-      </div>
-      <form>
-        <label for="firstInputBox">Enter your age:</label><br>
-        <input type="number" id="firstInputBox" value="0" oninput="ageValue();"><br>
-      </form>
-      <a href="#one" class="w3-btn w3-grey w3-round">Next Question</a>
-    </center>
-  </div>
-
-  <!-- Questions -->
-  <div class="page">
-    <!-- You can repeat this structure for each question -->
-    <!-- Question 1 -->
-    <div id="one" class="question">
-      <!-- Content -->
-      <!-- Navigation buttons -->
-    </div>
-    <!-- Repeat for other questions -->
-  </div>
-
-  <!-- Results -->
-  <div id="finalpage" class="page">
-    <div class="w3-container w3-flat-carrot">
-      <center>
-        <h1>Personality Test</h1>
-      </center>
-    </div>
-    <center>
-      <div class="w3-container">
-        <p id="endResults">Results</p>
-        <!-- Displays final introverted and extroverted percentages along with age -->
-        <p>You are <span id="ageValue">0</span> years old</p>
-        <p>You are <span id="introvertedValue">0</span>% Introverted</p>
-        <p>You are <span id="extrovertedValue">0</span>% Extroverted</p>
-      </div>
-      <a href="#content" onclick="resetVariables();" class="w3-btn w3-grey w3-round">Return to Home Page</a>
-    </center>
-  </div>
-
-  <!-- Footer -->
-  <footer class="w3-bottom w3-container w3-flat-carrot">
-    <p>Developed by Saket Upperla</p>
-  </footer>
-
-  <!-- JavaScript-->
-  <script>
-    var introvertedPercentage = 0;
-    var extrovertedPercentage = 0;
-    var age = 0;
-
-    function ageValue() {
-      age = parseFloat(document.getElementById("firstInputBox").value);
-      document.getElementById("ageValue").innerText = age;
-    }
-
-    function resetVariables() {
-      introvertedPercentage = 0;
-      extrovertedPercentage = 0;
-      age = 0;
-    }
-
-    function incrementIntroverted() {
-      introvertedPercentage += 10;
-      document.getElementById("introvertedValue").innerText = introvertedPercentage;
-    }
-
-    function incrementExtroverted() {
-      extrovertedPercentage += 10;
-      document.getElementById("extrovertedValue").innerText = extrovertedPercentage;
-    }
-  </script>
 </body>
-
 </html>
